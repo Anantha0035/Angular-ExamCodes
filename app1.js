@@ -1,0 +1,14 @@
+angular.module('planetApp',[]).controller('planetController',function($scope){
+    $scope.planets=[{
+        name:'mercury',
+        type:'terrestrial',
+        distance:0.4,
+        moons:0
+    },{
+        name:'mercury',
+        type:'terrestrial',
+        distance:0.4,
+        moons:0
+    }
+];
+});
