@@ -1,11 +1,25 @@
-angular.module("planetApp",[]).controller("planetController",function($scope){
-    $scope.planets=[
-        {name:'Mercury',type:'terrestrial',distance:0.4,moons:0},
-        {name:'Satrun',type:'terrestrial',distance:0.4,moons:0},
-        {name:'Venus',type:'terrestrial',distance:0.4,moons:0},
-        {name:'Mercury',type:'terrestrial',distance:0.4,moons:0},
-        {name:'Mercury',type:'terrestrial',distance:0.4,moons:0},
-        {name:'Mercury',type:'terrestrial',distance:0.4,moons:0},
-        {name:'Mercury',type:'terrestrial',distance:0.4,moons:0},
-    ];
-});
+var app = angular.module('communityCenterApp', []);
+
+app.controller('ServiceController', ['$scope', function($scope) {
+    $scope.services = [];
+
+    $scope.newService = {
+        name: '',
+        description: '',
+        date: ''
+    };
+
+    $scope.addService = function() {
+        if ($scope.newService.name && $scope.newService.description && $scope.newService.date) {
+            $scope.services.push({
+                name: $scope.newService.name,
+                description: $scope.newService.description,
+                date: $scope.newService.date
+            });
+
+            $scope.newService.name = '';
+            $scope.newService.description = '';
+            $scope.newService.date = '';
+        }
+    };
+}]);
