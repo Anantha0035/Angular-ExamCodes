@@ -6,7 +6,7 @@ angular.module('serviceApp',[]).controller('serviceController',['$scope',functio
         date:''
     };
     $scope.addService=function(){
-        if($scope.newService.name&&$scope.newService.description&&$scope.newService.date)
+        if($scope.newService.name && $scope.newService.description && $scope.newService.date)
             {
                 $scope.services.push({
                     name:$scope.newService.name,
